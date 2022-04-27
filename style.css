@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --color-default: #333;
+    --color-black: #111;
+    --color-green: #7AC968;
+    --color-blue: #3897D3;
+    --color-blue-hover: #227cb5;
+    --color-yellow: #EEF13B;
+    --color-light-bg: #F8FAFC;
+    --color-light-grey: #E3E3E3;
+    --color-grey: #666;
+    --page-bg: #fff;
+    --box-shadow: rgba(0,0,0,0.2);
+    --box-corner-radius: 10px;
+}
+html {
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+body {
+    padding: 1rem 1rem 0;
+    background-color: var(--page-bg);
+    color: var(--color-default);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:link, a:visited {
+    color: var(--color-blue);
+    transition: color 0.3s;
+}
+
+.head .container {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem 2rem;
+}
+.nolink {
+    text-decoration: none;
+}
+.logo {
+    width: 100%;
+}
+.head_nav {
+    text-align: right;
+    position: relative;
+}
+.head_nav .nav {
+    list-style: none;
+}
+.head_nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-default);
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.home_slant {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90rem;
+    background-color: var(--color-light-bg);
+    z-index: -1;
+}
+
+.home_hero {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+h1 span {
+    color: var(--color-green);
+}
+h1 {
+    font-size: 2.81rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+.cta {
+    position: relative;
+    margin-top: 20px;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.cta a {
+    text-decoration: none;
+    color: var(--color-default);
+}
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: var(--color-green);
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+.cta span {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--color-default);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.cta:hover:before {
+    width: 100%;
+    background: var(--color-green);
+}
+.cta:hover svg {
+    transform: translateX(0);
+}
+.cta:active {
+    transform: scale(0.95);
+}
+
+@media (min-width: 891px) {
+    .head {
+        background-color: var(--color-light-bg);
+        margin: -1rem;
+        width: calc(100% + 2rem);
+    }
+    .head_nav {
+        flex: 1 1 auto;
+    }
+    .head_nav > .nav_wrapper > .nav_trigger {
+        display: none;
+    }
+    .head_nav .nav li {
+        display: inline-block;
+        position: relative;
+    }
+    .nav_wrapper .nav > li a {
+        padding: 0.5rem 0rem;
+        border-bottom: 2px solid transparent;
+    }
+    .head_nav a {
+        margin-left: 1.5rem;
+    }
+}
+@media (min-width: 701px) {
+    .home_slant {
+        height: 40rem;
+    }
+    .home_hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home_video, .home_intro {
+        margin: 0;
+        width: 46%;
+    }
+    .home_intro div {
+        margin-top: 20px;
+        margin-left: -0.5rem;
+        display: flex;
+    }
+    .home_video {
+        margin-top: 2rem;
+        margin-bottom: 150px;
+    }
+}
+@media (min-width: 412px) {
+    .home_video {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .home_video {
+        margin-bottom: 150px;
+    }
+}
