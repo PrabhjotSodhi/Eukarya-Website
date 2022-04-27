@@ -101,6 +101,10 @@ h1 {
     font-size: 2.81rem;
     margin-bottom: 1rem;
 }
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+}
 h3 {
     font-weight: normal;
     font-size: 1.25rem;
@@ -158,6 +162,36 @@ h3 {
 .cta:active {
     transform: scale(0.95);
 }
+.home_image img {
+    position: relative;
+    display: block;
+    background-size: cover;
+    max-width: 720px;
+    width: 100%;
+}
+.home_explore_icon {
+    font-size: 1.5rem;
+    background-color: var(--color-light-bg);
+    margin-right: 1.25rem;
+    width: 4.938rem;
+    height: 4.938rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.home_explore_box {
+    display: block;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    
+}
+.home_card {
+    background-color: var(--color-light-bg);
+    padding: 4rem;
+    border-radius: 25px;
+}
 
 @media (min-width: 891px) {
     .head {
@@ -192,7 +226,7 @@ h3 {
         justify-content: space-between;
         align-items: center;
     }
-    .home_video, .home_intro {
+    .home_video, .home_intro, .home_image {
         margin: 0;
         width: 46%;
     }
@@ -205,13 +239,15 @@ h3 {
         margin-top: 2rem;
         margin-bottom: 150px;
     }
+    .home_explore {
+        width: 46%;
+    }
 }
 @media (min-width: 412px) {
     .home_video {
         margin-top: 2rem;
     }
 }
-
 @media (min-width:1024px) {
     .home_video {
         margin-bottom: 150px;
